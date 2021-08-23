@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Car.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TimerText.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GameScene.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Obstacle.tscn" type="PackedScene" id=5]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource( 4 )
@@ -16,11 +15,8 @@ position = Vector2( 163.137, 154.859 )
 
 [node name="TimerText" parent="." instance=ExtResource( 3 )]
 
-[node name="Obstacle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 108.69, -18.7089 )
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.109
+autostart = true
 
-[node name="Obstacle2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 166.598, -45.8813 )
-
-[node name="Obstacle3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 221.834, -18.7089 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
