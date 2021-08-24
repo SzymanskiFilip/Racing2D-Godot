@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 120.639
+margin_top = 114.36
+margin_right = 210.639
+margin_bottom = 134.36
+text = "PLAY AGAIN"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 113.746
+margin_top = 67.1272
+margin_right = 215.746
+margin_bottom = 97.1272
+text = "time achieved: 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
